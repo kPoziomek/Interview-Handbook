@@ -1,0 +1,55 @@
+---
+title: 'Understanding React Components'
+description: 'Deep dive into React components and their usage'
+category: 'basics'
+level: 'Beginner'
+order: 1
+---
+
+# Understanding React Components
+
+React components are the building blocks of any React application. They let you split the UI into independent, reusable pieces.
+
+## Function Components
+
+Function components are the modern way to write React components:
+
+```jsx
+function Welcome(props) {
+  return Hello, {props.name};
+}
+```
+
+## Props and State
+
+Components can accept props and manage state:
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+
+      Count: {count}
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+
+      </button>
+  );
+}
+```
+
+## Practice Exercise
+
+Try creating a Toggle component that switches between "ON" and "OFF":
+
+```jsx
+// Your solution here
+```
+
+## Key Points to Remember
+
+- Components must start with a capital letter
+- Components can be nested
+- Props are read-only
+- State can be changed using setState or the state setter function
