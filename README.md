@@ -18,7 +18,7 @@ A comprehensive guide to preparing for React interviews, featuring interactive e
 1. Clone the repository
 
 ```bash
-git clone
+git clone https://github.com/kPoziomek/Interview-Handbook.git
 ```
 
 2. Install dependencies
