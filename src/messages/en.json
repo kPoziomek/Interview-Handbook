@@ -1,0 +1,41 @@
+{
+  "homePage": {
+    "title": "React Interview Handbook"
+  },
+  "navigation": {
+    "home": "Home",
+    "basics": "Core React ",
+    "advanced": "React Router",
+    "patterns": "React Internationalization"
+  },
+  "common": {
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "loading": "Loading..."
+  },
+  "content": {
+    "basics": {
+      "IntroductionToReact": {
+        "title": "Introduction to React",
+        "description": "Introduction to React and its core concepts"
+      },
+      "what-is-react": {
+        "title": "What is React?",
+        "description": "React is a JavaScript library for building user interfaces"
+      },
+      "history-of-react": {
+        "title": "History of React",
+        "description": "History of React started in 2010"
+      },
+      "react-major-features": {
+        "title": "React Major Features",
+        "description": "The major features of React"
+      },
+      "what-is-jsx": {
+        "title": "What is JSX?",
+        "description": "JSX is a syntax extension for JavaScript"
+      }
+    }
+  }
+}

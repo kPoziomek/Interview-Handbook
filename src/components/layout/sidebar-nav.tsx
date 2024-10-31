@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'use-intl';
 
 type NavItem = {
   title: string;
@@ -12,33 +15,37 @@ type NavSection = {
   items: NavItem[];
 };
 
-const navigation: NavSection[] = [
-  {
-    title: 'Basics',
-    items: [
-      { title: 'Introduction to React', href: '/basics/introduction' },
-      { title: 'Components & Props', href: '/basics/components' },
-      {
-        title: 'State & Lifecycle',
-        href: '/basics/state',
-        items: [
-          { title: 'State', href: '/basics/state' },
-          { title: 'Lifecycle', href: '/basics/lifecycle' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Advanced',
-    items: [
-      { title: 'Design Patterns', href: '/advanced/patterns' },
-      { title: 'Performance', href: '/advanced/performance' },
-      { title: 'State Management', href: '/advanced/state-management' },
-    ],
-  },
-];
-
 export function SidebarNav() {
+  const t = useTranslations();
+
+  const navigation: NavSection[] = [
+    {
+      title: t('navigation.basics'),
+      items: [
+        {
+          title: t('content.basics.what-is-react.title'),
+          href: '/core-react/what-is-react',
+        },
+        {
+          title: t('content.basics.history-of-react.title'),
+          href: '/core-react/history-of-react',
+        },
+        {
+          title: t('content.basics.react-major-features.title'),
+          href: '/core-react/react-major-features',
+        },
+        {
+          title: t('content.basics.what-is-jsx.title'),
+          href: '/core-react/what-is-jsx',
+        },
+      ],
+    },
+    {
+      title: t('navigation.advanced'),
+      items: [],
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-4">
       <div className="px-4 py-2">
