@@ -1,0 +1,41 @@
+{
+  "homePage": {
+    "title": "React podręcznik rozmów kwalifikacyjnych"
+  },
+  "navigation": {
+    "home": "Strona główna",
+    "basics": "Podstawy",
+    "advanced": "Zaawansowane",
+    "patterns": "Wzorce projektowe"
+  },
+  "common": {
+    "next": "Dalej",
+    "previous": "Wstecz",
+    "search": "Szukaj",
+    "loading": "Ładowanie..."
+  },
+  "content": {
+    "basics": {
+      "IntroductionToReact": {
+        "title": "Wprowadzenie do Reacta",
+        "description": "Wprowadzenie do Reacta i jego podstawowych koncepcji"
+      },
+      "what-is-react": {
+        "title": "Czym jest React?",
+        "description": "React to biblioteka JavaScript do tworzenia interfejsów użytkownika"
+      },
+      "history-of-react": {
+        "title": "History React",
+        "description": "Historia Reacta sięga 2010 roku"
+      },
+      "react-major-features": {
+        "title": "React Główne cechy",
+        "description": "Główne cechy Reacta"
+      },
+      "what-is-jsx": {
+        "title": "Co to JSX?",
+        "description": "JSX to rozszerzenie składni dla JavaScriptu"
+      }
+    }
+  }
+}

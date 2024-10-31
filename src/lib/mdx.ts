@@ -10,7 +10,7 @@ export type Frontmatter = {
   order: number;
 };
 
-const contentDirectory = path.join(process.cwd(), 'src/content');
+const contentDirectory = path.join(process.cwd(), 'src/content/en/');
 
 export function getAllContentSlugs(category: string) {
   const files = fs.readdirSync(path.join(contentDirectory, category));
@@ -20,7 +20,13 @@ export function getAllContentSlugs(category: string) {
     .map((file) => file.replace(/\.mdx$/, ''));
 }
 
-export function getContentBySlug(category: string, slug: string) {
+export function getContentBySlug(
+  locale: string,
+  category: string,
+  slug: string
+) {
+  const contentDirectory = path.join(process.cwd(), `src/content/${locale}/`);
+
   const fullPath = path.join(contentDirectory, category, `${slug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data } = matter(fileContents);
@@ -31,10 +37,10 @@ export function getContentBySlug(category: string, slug: string) {
   };
 }
 
-export function getAllContent(category: string) {
+export function getAllContent(locale: string, category: string) {
   const slugs = getAllContentSlugs(category);
   const content = slugs
-    .map((slug) => getContentBySlug(category, slug))
+    .map((slug) => getContentBySlug(locale, category, slug))
     .sort((a, b) => a.frontmatter.order - b.frontmatter.order);
 
   return content;
