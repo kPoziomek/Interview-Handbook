@@ -46,3 +46,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Based on [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - React design patterns from [React Design Patterns](https://medium.com/@dotexedev/react-design-patterns-349c6644315f)
+- Translations delivered by [General Translations](https://www.generaltranslation.com/) 
