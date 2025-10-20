@@ -12,6 +12,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import { routing } from '@/i18n/routing';
 import { getMessages } from 'next-intl/server';
+import { GTProvider } from 'gt-next';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -42,31 +43,33 @@ export default async function Layout({
   return (
     <html lang={locale} className="h-full" suppressHydrationWarning>
       <body className={`${inter.className} h-full`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="flex h-full flex-col">
-              <MainNav />
-              <div className="flex-1 items-start lg:grid lg:grid-cols-[280px_1fr] lg:gap-6">
-                <aside className="fixed top-16 z-30 hidden h-[calc(100vh-4rem)] w-full shrink-0 overflow-y-auto border-r lg:sticky lg:block">
-                  <ScrollArea className="h-full py-6">
-                    <SidebarNav />
-                  </ScrollArea>
-                </aside>
-                <main className="flex-1">
-                  <div className="container max-w-3xl py-6 lg:py-10">
-                    <Breadcrumbs />
-                    {children}
-                  </div>
-                </main>
+        <GTProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <div className="flex h-full flex-col">
+                <MainNav />
+                <div className="flex-1 items-start lg:grid lg:grid-cols-[280px_1fr] lg:gap-6">
+                  <aside className="fixed top-16 z-30 hidden h-[calc(100vh-4rem)] w-full shrink-0 overflow-y-auto border-r lg:sticky lg:block">
+                    <ScrollArea className="h-full py-6">
+                      <SidebarNav />
+                    </ScrollArea>
+                  </aside>
+                  <main className="flex-1">
+                    <div className="container max-w-3xl py-6 lg:py-10">
+                      <Breadcrumbs />
+                      {children}
+                    </div>
+                  </main>
+                </div>
               </div>
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </GTProvider>
       </body>
     </html>
   );

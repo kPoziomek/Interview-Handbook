@@ -1,3 +1,5 @@
+import { T } from 'gt-next';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -14,7 +16,7 @@ export default function Home() {
       <section className="flex flex-col gap-4">
         <h1 className="text-4xl font-bold">React Interview Handbook</h1>
         <p className="text-xl text-muted-foreground">
-          Your comprehensive guide to React interview preparation
+          <T>Your comprehensive guide to React interview preparation</T>
         </p>
       </section>
 
