@@ -1,7 +1,7 @@
 'use client';
 
-import { useLocaleSelector } from 'gt-next/client';
-
+import { usePathname, useRouter } from 'next/navigation';
+import { locales } from '@/i18n/config';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -12,11 +12,14 @@ import { Button } from '@/components/ui/button';
 import { Languages } from 'lucide-react';
 
 export function LanguageSwitcher() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const currentLocale = pathname.split('/')[1];
   const switchLanguage = (locale: string) => {
-    setLocale(locale);
+    const newPathname = pathname.split('/').slice(2).join('/');
+    router.push(`/${locale}/${newPathname}`);
   };
-  const { locale, locales, setLocale, getLocaleProperties } =
-    useLocaleSelector();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,18 +29,15 @@ export function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {locales.map((loc) => {
-          const props = getLocaleProperties(loc);
-          return (
-            <DropdownMenuCheckboxItem
-              checked={locale === props.code}
-              key={loc}
-              onClick={() => switchLanguage(loc)}
-            >
-              {loc.toUpperCase()}
-            </DropdownMenuCheckboxItem>
-          );
-        })}
+        {locales.map((locale) => (
+          <DropdownMenuCheckboxItem
+            checked={locale === currentLocale}
+            key={locale}
+            onClick={() => switchLanguage(locale)}
+          >
+            {locale.toUpperCase()}
+          </DropdownMenuCheckboxItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
