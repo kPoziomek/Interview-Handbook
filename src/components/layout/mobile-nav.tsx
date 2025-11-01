@@ -1,7 +1,12 @@
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
-import { SidebarNav } from './sidebar-nav';
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import { SidebarNav } from "./sidebar-nav";
 
 export function MobileNav() {
   return (
@@ -14,6 +19,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-72">
         <div className="px-1">
+          <SheetTitle className="sr-only"></SheetTitle>
           <SidebarNav />
         </div>
       </SheetContent>

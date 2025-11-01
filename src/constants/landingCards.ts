@@ -1,29 +1,40 @@
-import type { LandingCard } from '@/types/landingCards';
+import type { LandingCard } from "@/types/landingCards";
 
 export const landingCards: LandingCard[] = [
   {
-    title: 'JavaScript',
-    description: 'Master the core language of the web and interview essentials',
-    href: '/js/introduction',
-    button: 'Start JavaScript',
+    title: "sidebar.js.title",
+    description: "sidebar.js.description",
+    href: "/js",
+    button: "Start JavaScript",
   },
   {
-    title: 'Vue',
-    description: 'Learn Vue.js concepts and ace your next interview',
-    href: '/vue/introduction',
-    button: 'Start Vue',
+    title: "sidebar.vue.title",
+    description: "sidebar.vue.description",
+    href: "/vue",
+    button: "Start Vue",
   },
   {
-    title: 'React',
-    description:
-      'Start with fundamental concepts every React developer should know',
-    href: '/react/introduction',
-    button: 'Start React',
+    title: "sidebar.react.title",
+    description: "sidebar.react.description",
+    href: "/react",
+    button: "Start React",
   },
   {
-    title: 'Angular',
-    description: 'Explore Angular topics and prepare for interviews',
-    href: '/angular/introduction',
-    button: 'Start Angular',
+    title: "sidebar.angular.title",
+    description: "sidebar.angular.description",
+    href: "/angular",
+    button: "Start Angular",
+  },
+  {
+    title: "sidebar.node.title",
+    description: "sidebar.node.description",
+    href: "/node",
+    button: "Start Node.js",
+  },
+  {
+    title: "sidebar.css.title",
+    description: "sidebar.css.description",
+    href: "/css",
+    button: "Start CSS",
   },
 ];

@@ -1,16 +1,18 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from '@/components/ui/card';
-import { landingCards } from '@/constants/landingCards';
-import type { LandingCard } from '@/types/landingCards';
+} from "@/components/ui/card";
+import { landingCards } from "@/constants/landingCards";
+import type { LandingCard } from "@/types/landingCards";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations();
   return (
     <div className="flex flex-col gap-8">
       <section className="flex flex-col gap-4">
@@ -22,16 +24,16 @@ export default function Home() {
       <section className="grid gap-4 md:grid-cols-2">
         {landingCards.map(
           ({ title, description, href, button }: LandingCard, idx) => (
-            <Card key={title}>
+            <Card key={t(title)}>
               <CardHeader>
-                <CardTitle>{title}</CardTitle>
-                <CardDescription>{description}</CardDescription>
+                <CardTitle>{t(title)}</CardTitle>
+                <CardDescription>{t(description)}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button
                   asChild
                   className="w-full"
-                  variant={idx % 2 === 1 ? 'outline' : undefined}
+                  variant={idx % 2 === 1 ? "outline" : undefined}
                 >
                   <Link href={href}>{button}</Link>
                 </Button>

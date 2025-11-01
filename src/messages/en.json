@@ -1,6 +1,45 @@
 {
   "homePage": {
-    "title": "React Interview Handbook"
+    "title": "Interview Handbook"
+  },
+  "sidebar": {
+    "js": {
+      "title": "JavaScript",
+      "description": "Master the core language of the web and interview essentials",
+        "introduction": "Introduction to JavaScript",
+        "data-types": "Data Types"
+    },
+    "react": {
+      "title": "React",
+        "description": "Start with fundamental concepts every React developer should know",
+      "introduction": "Introduction to React",
+      "components-jsx": "Components and JSX"
+    },
+    "vue": {
+      "title": "Vue",
+      "description": "Learn Vue.js concepts and ace your next interview",
+        "introduction": "Introduction to Vue"
+    },
+    "angular": {
+      "title": "Angular",
+      "description": "Explore Angular topics and prepare for interviews",
+        "introduction": "Introduction to Angular"
+    },
+    "node": {
+      "title": "Node.js",
+      "description": "Get ready for Node.js interviews with essential topics",
+      "introduction": "Introduction to Node.js"
+    },
+    "css": {
+      "title": "CSS",
+        "description": "Brush up on CSS knowledge for your next interview",
+      "introduction": "Introduction to CSS"
+    },
+    "nextjs": {
+      "title": "Next.js",
+        "description": "Prepare for Next.js interviews with key concepts",
+      "introduction": "Introduction to Next.js"
+    }
   },
   "navigation": {
     "home": "Home",

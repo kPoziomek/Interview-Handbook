@@ -1,6 +1,47 @@
 {
   "homePage": {
-    "title": "React podręcznik rozmów kwalifikacyjnych"
+    "title": "Podręcznik rozmów kwalifikacyjnych"
+  },
+  "sidebar": {
+    "js": {
+      "title": "JavaScript",
+      "description": "Opanuj podstawowy język sieci i niezbędne informacje do rozmów kwalifikacyjnych",
+      "introduction": "Wprowadzenie do JavaScriptu",
+      "data-types": "Typy danych"
+
+    },
+    "react": {
+      "title": "React",
+        "description": "Zacznij od podstawowych koncepcji, które powinien znać każdy programista React",
+      "introduction": "Wprowadzenie do Reacta",
+      "components-jsx": "Komponenty i JSX"
+    },
+    "vue": {
+      "title": "Vue",
+        "description": "Poznaj koncepcje Vue.js i zdobądź przewagę w kolejnej rozmowie kwalifikacyjnej",
+        "introduction": "Wprowadzenie do Vue"
+
+    },
+    "angular": {
+      "title": "Angular",
+        "description": "Poznaj tematy Angulara i przygotuj się do rozmów kwalifikacyjnych",
+        "introduction": "Wprowadzenie do Angulara"
+    },
+    "node": {
+      "title": "Node.js",
+      "description": "Przygotuj się do rozmów kwalifikacyjnych z Node.js dzięki niezbędnym tematom",
+      "introduction": "Wprowadzenie do Node.js"
+    },
+    "css": {
+      "title": "CSS",
+        "description": "Odśwież swoją wiedzę na temat CSS przed następną rozmową kwalifikacyjną",
+      "introduction": "Wprowadzenie do CSS"
+    },
+    "nextjs": {
+      "title": "Next.js",
+        "description": "Przygotuj się do rozmów kwalifikacyjnych z Next.js dzięki kluczowym koncepcjom",
+      "introduction": "Wprowadzenie do Next.js"
+    }
   },
   "navigation": {
     "home": "Strona główna",
