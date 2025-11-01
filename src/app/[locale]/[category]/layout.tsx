@@ -13,7 +13,7 @@ export default function JSLayout({ children }: { children: React.ReactNode }) {
           </ScrollArea>
         </aside>
         <main className="flex-1">
-          <div className="container max-w-3xl py-6 lg:py-10">
+          <div className="container max-w-6xl py-6 lg:py-10">
             <Breadcrumbs />
             {children}
           </div>

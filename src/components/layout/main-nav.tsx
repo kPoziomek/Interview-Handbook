@@ -17,8 +17,6 @@ export function MainNav() {
             <span className="font-bold">{t("homePage.title")}</span>
           </Link>
         </div>
-        <Breadcrumbs />
-
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <LanguageSwitcher />

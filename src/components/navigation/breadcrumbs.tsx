@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChevronRight, Home } from "lucide-react";
 
 type Crumb = {
   label: string;
@@ -13,28 +13,28 @@ export function Breadcrumbs() {
   const pathname = usePathname();
 
   const generateBreadcrumbs = (): Crumb[] => {
-    const asPathWithoutQuery = pathname.split('?')[0];
+    const asPathWithoutQuery = pathname.split("?")[0];
     const asPathNestedRoutes = asPathWithoutQuery
-      .split('/')
+      .split("/")
       .filter((v) => v.length > 0);
 
     const crumbList = asPathNestedRoutes.map((subpath, idx) => {
-      const href = '/' + asPathNestedRoutes.slice(0, idx + 1).join('/');
+      const href = "/" + asPathNestedRoutes.slice(0, idx + 1).join("/");
       return {
         href,
         label: formatLabel(subpath),
       };
     });
 
-    return [{ href: '/', label: 'Home' }, ...crumbList];
+    return [{ href: "/", label: "Home" }, ...crumbList];
   };
 
   const formatLabel = (text: string): string => {
     // Convert kebab-case to Title Case
     return text
-      .split('-')
+      .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+      .join(" ");
   };
 
   const breadcrumbs = generateBreadcrumbs();
@@ -42,7 +42,7 @@ export function Breadcrumbs() {
   return (
     <nav
       aria-label="Breadcrumbs"
-      className="flex items-center space-x-1 text-sm text-muted-foreground"
+      className="flex items-center space-x-1 text-sm text-muted-foreground pb-4"
     >
       {breadcrumbs.map((crumb, idx) => {
         const isLastItem = idx === breadcrumbs.length - 1;
@@ -63,7 +63,7 @@ export function Breadcrumbs() {
               <Link
                 href={crumb.href}
                 className={`hover:text-foreground transition-colors ${
-                  isLastItem ? 'text-foreground font-medium' : ''
+                  isLastItem ? "text-foreground font-medium" : ""
                 }`}
               >
                 {crumb.label}
