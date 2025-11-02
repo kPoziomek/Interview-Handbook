@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { locales } from '@/i18n/config';
+import { usePathname, useRouter } from "next/navigation";
+import { locales } from "@/i18n/config";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import { Languages } from 'lucide-react';
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Languages } from "lucide-react";
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
-  const currentLocale = pathname.split('/')[1];
+  const currentLocale = pathname.split("/")[1];
   const switchLanguage = (locale: string) => {
-    const newPathname = pathname.split('/').slice(2).join('/');
+    const newPathname = pathname.split("/").slice(2).join("/");
     router.push(`/${locale}/${newPathname}`);
   };
 

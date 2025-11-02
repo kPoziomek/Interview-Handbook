@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'pl';
+export type Locale = "en" | "pl";
 
 export interface LocalizedContent {
   title: string;

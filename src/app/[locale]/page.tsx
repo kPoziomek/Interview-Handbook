@@ -35,11 +35,11 @@ export default function Home() {
                   className="w-full"
                   variant={idx % 2 === 1 ? "outline" : undefined}
                 >
-                  <Link href={href}>{button}</Link>
+                  <Link href={href}>{t(button)}</Link>
                 </Button>
               </CardContent>
             </Card>
-          )
+          ),
         )}
       </section>
     </div>

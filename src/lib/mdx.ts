@@ -23,7 +23,7 @@ export function getAllContentSlugs(category: string) {
 export function getContentBySlug(
   locale: string,
   category: string,
-  slug: string
+  slug: string,
 ) {
   const contentDirectory = path.join(process.cwd(), `src/content/${locale}/`);
 

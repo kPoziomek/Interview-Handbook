@@ -1,6 +1,7 @@
-import { getContentBySlug } from '@/lib/mdx';
-import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
+import { getContentBySlug } from "@/lib/mdx";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
 // Dynamic SEO metadata based on frontmatter
 export async function generateMetadata({
   params,
@@ -8,11 +9,11 @@ export async function generateMetadata({
   const { category, slug, locale } = await params;
   const { frontmatter } = getContentBySlug(locale, category, slug);
   return {
-    title: frontmatter?.title || 'Interview Handbook',
-    description: frontmatter?.description || '',
+    title: frontmatter?.title || "Interview Handbook",
+    description: frontmatter?.description || "",
     openGraph: {
-      title: frontmatter?.title || 'Interview Handbook',
-      description: frontmatter?.description || '',
+      title: frontmatter?.title || "Interview Handbook",
+      description: frontmatter?.description || "",
     },
   };
 }
@@ -41,7 +42,7 @@ export default async function Page({ params }: PageProps) {
   );
 }
 export function generateStaticParams() {
-  return [{ slug: 'welcome' }, { slug: 'about' }];
+  return [{ slug: "welcome" }, { slug: "about" }];
 }
 
 export const dynamicParams = false;

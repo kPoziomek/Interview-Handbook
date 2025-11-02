@@ -1,15 +1,15 @@
 {
-	"semi": true,
-	"tabWidth": 2,
-	"trailingComma": "es5",
-	"overrides": [
-		{
-			"files": "*.mdx",
-			"options": {
-				"parser": "mdx",
-				"proseWrap": "always"
-			}
-		}
-	],
-	"embeddedLanguageFormatting": "auto"
+  "semi": true,
+  "tabWidth": 2,
+  "eslintIntegration": true,
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "options": {
+        "parser": "mdx",
+        "proseWrap": "always"
+      }
+    }
+  ],
+  "embeddedLanguageFormatting": "auto",
 }

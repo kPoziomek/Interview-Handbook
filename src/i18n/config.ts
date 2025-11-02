@@ -1,13 +1,13 @@
-export const locales = ['en', 'pl'] as const;
+export const locales = ["en", "pl"] as const;
 
 export const pathnames = {
-  '/': '/',
-  '/basics': {
-    en: '/basics',
-    pl: '/podstawy',
+  "/": "/",
+  "/basics": {
+    en: "/basics",
+    pl: "/podstawy",
   },
-  '/advanced': {
-    en: '/advanced',
-    pl: '/zaawansowane',
+  "/advanced": {
+    en: "/advanced",
+    pl: "/zaawansowane",
   },
 } as const;

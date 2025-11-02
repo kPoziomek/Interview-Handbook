@@ -23,7 +23,7 @@ export const sidebarNavigation: Record<
     items: [
       {
         titleKey: "sidebar.react.introduction",
-        href: "/react/introduction",
+        href: "/react/history",
         isDone: false,
       },
       {

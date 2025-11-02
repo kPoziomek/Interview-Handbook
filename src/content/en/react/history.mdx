@@ -1,0 +1,71 @@
+export const metadata = {
+  title: "Co to React?",
+  description: "krótkie wprowadzenie do React.js",
+  date: "2025-03-17T12:00:00Z",
+  tags: ["React", "JavaScript", "Frontend"],
+};
+
+
+
+### What is the history behind React evolution?
+
+...
+
+
+<details>
+  <summary>This is how MDX works</summary>
+
+  <b>See deep-dive answer</b>
+  The evolution of React has a fascinating history that spans over a decade:
+
+  **2010-2011: The Origins**
+
+  - The journey began with **XHP**, a PHP extension created at Facebook that
+  allowed HTML components to be used in PHP code
+  - XHP improved front-end code readability and helped prevent cross-site
+  scripting (XSS) attacks
+  - However, XHP had limitations with dynamic web applications, requiring frequent
+  server roundtrips and complete UI re-renders for small changes
+
+  **2011-2012: Early Development**
+
+  - Jordan Walke created the first prototype called **FaxJS** (later renamed to
+  React), inspired by XHP's component model
+  - The key innovation was bringing XHP's component model to JavaScript with
+  performance improvements
+  - React introduced the Virtual DOM concept to solve the performance issues of
+  full page re-renders
+  - First deployed internally on Facebook's News Feed in 2011 and Instagram in
+  2012
+
+  **2013: Public Release**
+
+  - React was officially open-sourced at JSConf US in May 2013
+  - Initial public reception was mixed, with some developers skeptical about the
+  JSX syntax and the approach of mixing markup with JavaScript
+
+  **2014-2015: Growing Adoption**
+
+  - React Native was announced in 2015, extending React's paradigm to mobile app
+  development
+  - The ecosystem began to grow with tools like Redux for state management
+  - Companies beyond Facebook began adopting React for production applications
+
+  **Note:** JSX, React's syntax extension, was indeed inspired by XHP's approach
+  of embedding XML-like syntax in code.
+</details>
+
+
+
+
+``` jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```

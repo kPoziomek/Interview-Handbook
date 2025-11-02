@@ -1,0 +1,19 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+**/*.html
+
+node_modules
+package-lock.json
+package.json
+yarn.lock
+pnpm-lock.yaml
+.vscode
+.DS_Store
+.env
+.env.local
+.env.development.local
+.eslintrc.json
+.prettierrc
